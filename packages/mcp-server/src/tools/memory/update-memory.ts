@@ -2,7 +2,7 @@
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
 import type { Metadata } from '../';
-import Papr from 'papr-python-sdk';
+import Papr from 'papr';
 
 export const metadata: Metadata = {
   resource: 'memory',

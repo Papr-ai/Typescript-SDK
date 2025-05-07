@@ -24,7 +24,7 @@ npx ./packages/mcp-server
 ```
 
 > [!NOTE]
-> Once this package is [published to npm](https://app.stainless.com/docs/guides/publish), this will become: `npx -y papr-python-sdk-mcp`
+> Once this package is [published to npm](https://app.stainless.com/docs/guides/publish), this will become: `npx -y papr-mcp`
 
 ### Via MCP Client
 
@@ -38,7 +38,7 @@ For clients with a configuration JSON, it might look something like this:
 ```json
 {
   "mcpServers": {
-    "papr_python_sdk_api": {
+    "papr_api": {
       "command": "npx",
       "args": ["-y", "/path/to/local/papr-python-sdk-typescript/packages/mcp-server", "--client=claude"],
       "env": {
@@ -124,10 +124,10 @@ over time, you can manually enable or disable certain capabilities:
 
 ```js
 // Import the server, generated endpoints, or the init function
-import { server, endpoints, init } from "papr-python-sdk-mcp/server";
+import { server, endpoints, init } from "papr-mcp/server";
 
 // import a specific tool
-import createUser from "papr-python-sdk-mcp/tools/user/create-user";
+import createUser from "papr-mcp/tools/user/create-user";
 
 // initialize the server and all endpoints
 init({ server, endpoints });

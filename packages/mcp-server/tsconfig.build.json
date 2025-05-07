@@ -5,8 +5,8 @@
   "compilerOptions": {
     "rootDir": "./dist/src",
     "paths": {
-      "papr-python-sdk-mcp/*": ["dist/src/*"],
-      "papr-python-sdk-mcp": ["dist/src/index.ts"]
+      "papr-mcp/*": ["dist/src/*"],
+      "papr-mcp": ["dist/src/index.ts"]
     },
     "noEmit": false,
     "declaration": true,

@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import Papr from 'papr-python-sdk';
+import Papr from 'papr';
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
 
 import create_user from './user/create-user';

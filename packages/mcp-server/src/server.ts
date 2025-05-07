@@ -4,14 +4,14 @@ import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { endpoints, HandlerFunction } from './tools';
 import { CallToolRequestSchema, ListToolsRequestSchema, Tool } from '@modelcontextprotocol/sdk/types.js';
-import Papr from 'papr-python-sdk';
+import Papr from 'papr';
 import { ClientCapabilities, defaultClientCapabilities, parseEmbeddedJSON } from './compat';
 export { endpoints } from './tools';
 
 // Create server instance
 export const server = new McpServer(
   {
-    name: 'papr_python_sdk_api',
+    name: 'papr_api',
     version: '0.0.1-alpha.0',
   },
   {

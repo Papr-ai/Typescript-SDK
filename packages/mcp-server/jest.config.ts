@@ -7,8 +7,8 @@ const config: JestConfigWithTsJest = {
     '^.+\\.(t|j)sx?$': ['@swc/jest', { sourceMaps: 'inline' }],
   },
   moduleNameMapper: {
-    '^papr-python-sdk-mcp$': '<rootDir>/src/index.ts',
-    '^papr-python-sdk-mcp/(.*)$': '<rootDir>/src/$1',
+    '^papr-mcp$': '<rootDir>/src/index.ts',
+    '^papr-mcp/(.*)$': '<rootDir>/src/$1',
   },
   modulePathIgnorePatterns: ['<rootDir>/dist/'],
   testPathIgnorePatterns: ['scripts'],

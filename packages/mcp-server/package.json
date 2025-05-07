@@ -1,5 +1,5 @@
 {
-  "name": "papr-python-sdk-mcp",
+  "name": "papr-mcp",
   "version": "0.0.1-alpha.0",
   "description": "The official MCP Server for the Papr API",
   "author": "Papr <support@papr.ai>",
@@ -27,7 +27,7 @@
     "fix": "eslint --fix --ext ts,js ."
   },
   "dependencies": {
-    "papr-python-sdk": "file:../../dist/",
+    "papr": "file:../../dist/",
     "@modelcontextprotocol/sdk": "^1.6.1",
     "yargs": "^17.7.2"
   },
@@ -51,8 +51,8 @@
     "typescript": "5.8.3"
   },
   "imports": {
-    "papr-python-sdk-mcp": ".",
-    "papr-python-sdk-mcp/*": "./src/*"
+    "papr-mcp": ".",
+    "papr-mcp/*": "./src/*"
   },
   "exports": {
     ".": {
