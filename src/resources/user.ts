@@ -1,0 +1,150 @@
+// File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
+
+import { APIResource } from '../core/resource';
+import { APIPromise } from '../core/api-promise';
+import { RequestOptions } from '../internal/request-options';
+import { path } from '../internal/utils/path';
+
+export class User extends APIResource {
+  /**
+   * Create a new user or link existing user to developer
+   *
+   * @example
+   * ```ts
+   * const userResponse = await client.user.create({
+   *   external_id: 'user123',
+   * });
+   * ```
+   */
+  create(body: UserCreateParams, options?: RequestOptions): APIPromise<UserResponse> {
+    return this._client.post('/v1/user', { body, ...options });
+  }
+
+  /**
+   * Update user details by user_id (\_User.objectId) and developer association
+   *
+   * @example
+   * ```ts
+   * const userResponse = await client.user.update('user_id');
+   * ```
+   */
+  update(userID: string, body: UserUpdateParams, options?: RequestOptions): APIPromise<UserResponse> {
+    return this._client.put(path`/v1/user/${userID}`, { body, ...options });
+  }
+
+  /**
+   * List users for a developer
+   *
+   * @example
+   * ```ts
+   * const users = await client.user.list();
+   * ```
+   */
+  list(
+    query: UserListParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<UserListResponse> {
+    return this._client.get('/v1/user', { query, ...options });
+  }
+
+  /**
+   * Delete user association with developer and the user itself by user_id
+   * (\_User.objectId)
+   *
+   * @example
+   * ```ts
+   * const user = await client.user.delete('user_id');
+   * ```
+   */
+  delete(userID: string, options?: RequestOptions): APIPromise<unknown> {
+    return this._client.delete(path`/v1/user/${userID}`, options);
+  }
+
+  /**
+   * Get user details by user_id (\_User.objectId) and developer association
+   *
+   * @example
+   * ```ts
+   * const userResponse = await client.user.get('user_id');
+   * ```
+   */
+  get(userID: string, options?: RequestOptions): APIPromise<UserResponse> {
+    return this._client.get(path`/v1/user/${userID}`, options);
+  }
+}
+
+/**
+ * Response model for user operations
+ */
+export interface UserResponse {
+  user_id: string;
+
+  created_at?: string | null;
+
+  email?: string | null;
+
+  external_id?: string | null;
+
+  metadata?: unknown | null;
+
+  updated_at?: string | null;
+}
+
+export type UserType = 'developerUser' | 'user' | 'agent';
+
+/**
+ * Response model for listing users
+ */
+export interface UserListResponse {
+  data: Array<UserResponse>;
+
+  page: number;
+
+  page_size: number;
+
+  total: number;
+}
+
+export type UserDeleteResponse = unknown;
+
+export interface UserCreateParams {
+  external_id: string;
+
+  email?: string | null;
+
+  metadata?: unknown | null;
+
+  type?: UserType;
+}
+
+export interface UserUpdateParams {
+  email?: string | null;
+
+  external_id?: string | null;
+
+  metadata?: unknown | null;
+
+  type?: UserType | null;
+}
+
+export interface UserListParams {
+  email?: string | null;
+
+  external_id?: string | null;
+
+  page?: number;
+
+  page_size?: number;
+}
+
+export declare namespace User {
+  export {
+    type UserResponse as UserResponse,
+    type UserType as UserType,
+    type UserListResponse as UserListResponse,
+    type UserDeleteResponse as UserDeleteResponse,
+    type UserCreateParams as UserCreateParams,
+    type UserUpdateParams as UserUpdateParams,
+    type UserListParams as UserListParams,
+  };
+}
