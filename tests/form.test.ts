@@ -1,5 +1,5 @@
-import { multipartFormRequestOptions, createForm } from 'papr-python-sdk/internal/uploads';
-import { toFile } from 'papr-python-sdk/core/uploads';
+import { multipartFormRequestOptions, createForm } from 'papr/internal/uploads';
+import { toFile } from 'papr/core/uploads';
 
 describe('form data validation', () => {
   test('valid values do not error', async () => {

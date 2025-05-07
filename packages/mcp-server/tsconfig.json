@@ -9,8 +9,8 @@
     "esModuleInterop": true,
     "baseUrl": "./",
     "paths": {
-      "papr-python-sdk-mcp/*": ["src/*"],
-      "papr-python-sdk-mcp": ["src/index.ts"]
+      "papr-mcp/*": ["src/*"],
+      "papr-mcp": ["src/index.ts"]
     },
     "noEmit": true,
 

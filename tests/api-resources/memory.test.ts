@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import Papr from 'papr-python-sdk';
+import Papr from 'papr';
 
 const client = new Papr({
   apiKey: 'My API Key',

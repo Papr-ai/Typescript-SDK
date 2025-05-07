@@ -1,10 +1,10 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIPromise } from 'papr-python-sdk/core/api-promise';
+import { APIPromise } from 'papr/core/api-promise';
 
 import util from 'node:util';
-import Papr from 'papr-python-sdk';
-import { APIUserAbortError } from 'papr-python-sdk';
+import Papr from 'papr';
+import { APIUserAbortError } from 'papr';
 const defaultFetch = fetch;
 
 describe('instantiate client', () => {

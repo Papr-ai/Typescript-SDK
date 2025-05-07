@@ -55,12 +55,12 @@ $ cd papr-python-sdk-typescript
 # With yarn
 $ yarn link
 $ cd ../my-package
-$ yarn link papr-python-sdk
+$ yarn link papr
 
 # With pnpm
 $ pnpm link --global
 $ cd ../my-package
-$ pnpm link -—global papr-python-sdk
+$ pnpm link -—global papr
 ```
 
 ## Running tests
