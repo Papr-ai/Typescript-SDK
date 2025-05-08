@@ -1,4 +1,4 @@
 configured_endpoints: 12
-openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/papr%2Fpapr-python-sdk-7915bb3cf628af5f268bf08fd8ea6e40ac953ae80bde17bb1bb8445b98e99049.yml
-openapi_spec_hash: 6d6303ae791753b7661edf572fc696c2
-config_hash: a6f355b97f01abe7d6859d01961c6975
+openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/papr%2Fpapr-python-sdk-42de7409e8f99f99af225427db68be5849261f49b63971b9a6e74286d76e7bc4.yml
+openapi_spec_hash: a98e5b850b1c654866c902033ff0a096
+config_hash: f06a1c4d1be2b21c7a92ed29f5a8ebe8
