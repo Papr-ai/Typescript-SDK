@@ -9,8 +9,8 @@ It is generated with [Stainless](https://www.stainless.com/).
 Because it's not published yet, clone the repo and build it:
 
 ```sh
-git clone git@github.com:stainless-sdks/papr-python-sdk-typescript.git
-cd papr-python-sdk-typescript
+git clone git@github.com:Papr-ai/Typescript-SDK.git
+cd Typescript-SDK
 yarn && ./scripts/build-all
 ```
 
@@ -40,7 +40,7 @@ For clients with a configuration JSON, it might look something like this:
   "mcpServers": {
     "papr_api": {
       "command": "npx",
-      "args": ["-y", "/path/to/local/papr-python-sdk-typescript/packages/mcp-server", "--client=claude"],
+      "args": ["-y", "/path/to/local/Typescript-SDK/packages/mcp-server", "--client=claude"],
       "env": {
         "PAPR_PYTHON_SDK_API_KEY": "My API Key",
         "PAPR_PYTHON_SDK_BEARER_TOKEN": "My Bearer Token"
