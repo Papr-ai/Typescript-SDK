@@ -4,31 +4,17 @@ It is generated with [Stainless](https://www.stainless.com/).
 
 ## Installation
 
-### Building
+### Direct invocation
 
-Because it's not published yet, clone the repo and build it:
-
-```sh
-git clone git@github.com:Papr-ai/Typescript-SDK.git
-cd Typescript-SDK
-yarn && ./scripts/build-all
-```
-
-### Running
+You can run the MCP Server directly via `npx`:
 
 ```sh
-# set env vars as needed
 export PAPR_PYTHON_SDK_API_KEY="My API Key"
 export PAPR_PYTHON_SDK_BEARER_TOKEN="My Bearer Token"
-npx ./packages/mcp-server
+npx -y papr-mcp
 ```
 
-> [!NOTE]
-> Once this package is [published to npm](https://app.stainless.com/docs/guides/publish), this will become: `npx -y papr-mcp`
-
 ### Via MCP Client
-
-[Build the project](#building) as mentioned above.
 
 There is a partial list of existing clients at [modelcontextprotocol.io](https://modelcontextprotocol.io/clients). If you already
 have a client, consult their documentation to install the MCP server.
@@ -40,7 +26,7 @@ For clients with a configuration JSON, it might look something like this:
   "mcpServers": {
     "papr_api": {
       "command": "npx",
-      "args": ["-y", "/path/to/local/Typescript-SDK/packages/mcp-server", "--client=claude"],
+      "args": ["-y", "papr-mcp", "--client=claude"],
       "env": {
         "PAPR_PYTHON_SDK_API_KEY": "My API Key",
         "PAPR_PYTHON_SDK_BEARER_TOKEN": "My Bearer Token"
